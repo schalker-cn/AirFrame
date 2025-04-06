@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { faker } from "@faker-js/faker";
 import _ from "lodash";
 import {
   Container,
@@ -12,25 +11,14 @@ import {
   DropdownItem,
   FloatGrid as Grid,
   Card,
-  Media,
   CardBody,
-  ListGroup,
-  ListGroupItem,
-  Progress,
-  Table,
-  CardFooter,
   Button,
   CardHeader,
 } from "./../../../components";
 import { applyColumn } from "./../../../components/FloatGrid";
 
 import { HeaderMain } from "../../components/HeaderMain";
-
-import { MetricVsTarget } from "../../components/Analytics/MetricVsTarget";
-import { WebsitePerformance } from "../../components/Analytics/WebsitePerformance";
 import { AudienceMetricsChart } from "./components/AudienceMetricsChart";
-import { TinyAreaChart } from "../../components/Analytics/TinyAreaChart";
-import { SimpleLineChart } from "./../../Graphs/ReCharts/components/SimpleLineChart";
 
 import classes from "./Analytics.scss";
 

@@ -24,7 +24,7 @@ import { NavbarUser } from './../../../layout/components/NavbarUser';
 import { NavbarNavigation } from './NavbarNavigation';
 import { DropdownProfile } from './../Dropdowns/DropdownProfile';
 
-import { randomAvatar } from './../../../utilities';
+import avatarImg from "../../../images/placeholder.jpg";
 
 const NavbarExample = ({ themeColor, themeStyle, navStyle }) => {
     return (
@@ -62,7 +62,7 @@ const NavbarExample = ({ themeColor, themeStyle, navStyle }) => {
                         <DropdownToggle nav>
                             <Avatar.Image
                                 size="sm"
-                                src={ randomAvatar() }
+                                src={ avatarImg }
                                 addOns={[
                                     <AvatarAddOn.Icon 
                                         className="fa fa-circle"

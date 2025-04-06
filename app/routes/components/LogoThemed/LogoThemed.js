@@ -5,16 +5,16 @@ import classNames from 'classnames';
 import { ThemeConsumer } from '../../../components/Theme';
 
 const logos = {
-    'white': require('./../../../images/logos/logo-white.svg'),
-    'primary': require('./../../../images/logos/logo-primary.svg'),
-    'success': require('./../../../images/logos/logo-success.svg'),
-    'warning': require('./../../../images/logos/logo-warning.svg'),
-    'danger': require('./../../../images/logos/logo-danger.svg'),
-    'info': require('./../../../images/logos/logo-info.svg'),
-    'indigo': require('./../../../images/logos/logo-indigo.svg'),
-    'purple': require('./../../../images/logos/logo-purple.svg'),
-    'pink': require('./../../../images/logos/logo-pink.svg'),
-    'yellow': require('./../../../images/logos/logo-yellow.svg')
+    'white': require('./../../../images/logoPlaceholder.jpg'),
+    'primary': require('./../../../images/logoPlaceholder.jpg'),
+    'success': require('./../../../images/logoPlaceholder.jpg'),
+    'warning': require('./../../../images/logoPlaceholder.jpg'),
+    'danger': require('./../../../images/logoPlaceholder.jpg'),
+    'info': require('./../../../images/logoPlaceholder.jpg'),
+    'indigo': require('./../../../images/logoPlaceholder.jpg'),
+    'purple': require('./../../../images/logoPlaceholder.jpg'),
+    'pink': require('./../../../images/logoPlaceholder.jpg'),
+    'yellow': require('./../../../images/logoPlaceholder.jpg')
 }
 
 const getLogoUrl = (style, color) => {
@@ -24,7 +24,7 @@ const getLogoUrl = (style, color) => {
 // Check for background
 const getLogoUrlBackground = (style, color) => {
     if (style === 'color') {
-        return logos['white'];
+        return logos['blue'];
     } else {
         return getLogoUrl(style, color);
     }
