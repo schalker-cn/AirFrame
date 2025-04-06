@@ -17,47 +17,6 @@ import SidebarWithNavbar from './Layouts/SidebarWithNavbar';
 
 
 
-import Tables from './Tables/Tables';
-import ExtendedTable from './Tables/ExtendedTable';
-import AgGrid from './Tables/AgGrid';
-
-import AccountEdit from './Apps/AccountEdit';
-import BillingEdit from './Apps/BillingEdit';
-import Chat from './Apps/Chat';
-import Clients from './Apps/Clients';
-import EmailDetails from './Apps/EmailDetails';
-import Files from './Apps/Files';
-import GalleryGrid from './Apps/GalleryGrid';
-import GalleryTable from './Apps/GalleryTable';
-import ImagesResults from './Apps/ImagesResults';
-import Inbox from './Apps/Inbox';
-import NewEmail from './Apps/NewEmail';
-import ProfileDetails from './Apps/ProfileDetails';
-import ProfileEdit from './Apps/ProfileEdit';
-import Projects from './Apps/Projects';
-import SearchResults from './Apps/SearchResults';
-import SessionsEdit from './Apps/SessionsEdit';
-import SettingsEdit from './Apps/SettingsEdit';
-import Tasks from './Apps/Tasks';
-import TasksDetails from './Apps/TasksDetails';
-import TasksKanban from './Apps/TasksKanban';
-import Users from './Apps/Users';
-import UsersResults from './Apps/UsersResults';
-import VideosResults from './Apps/VideosResults';
-
-import ComingSoon from './Pages/ComingSoon';
-import Confirmation from './Pages/Confirmation';
-import Danger from './Pages/Danger';
-import Error404 from './Pages/Error404';
-import ForgotPassword from './Pages/ForgotPassword';
-import LockScreen from './Pages/LockScreen';
-import Login from './Pages/Login';
-import Register from './Pages/Register';
-import Success from './Pages/Success';
-import Timeline from './Pages/Timeline';
-
-import Icons from './Icons';
-
 // ----------- Layout Imports ---------------
 import { DefaultNavbar } from './../layout/components/DefaultNavbar';
 import { DefaultSidebar } from './../layout/components/DefaultSidebar';
