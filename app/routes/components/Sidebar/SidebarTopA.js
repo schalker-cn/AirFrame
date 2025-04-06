@@ -1,5 +1,4 @@
 import React from "react";
-import { faker } from "@faker-js/faker";
 import { Link } from "react-router-dom";
 
 import {
@@ -11,9 +10,9 @@ import {
   DropdownMenu,
   DropdownItem,
 } from "./../../../components";
-import { randomAvatar } from "./../../../utilities";
 
-const avatarImg = randomAvatar();
+import avatarImg from "../../../images/placeholder.jpg";
+
 
 const SidebarTopA = () => (
   <React.Fragment>
@@ -46,12 +45,12 @@ const SidebarTopA = () => (
             color="link"
             className="pl-0 pb-0 btn-profile sidebar__link"
           >
-            {faker.person.firstName()} {faker.person.lastName()}
+            Isabella Rossi
             <i className="fa fa-angle-down ml-2"></i>
           </DropdownToggle>
           <DropdownMenu persist>
             <DropdownItem header>
-              {faker.person.firstName()} {faker.person.lastName()}
+            Isabella Rossi
             </DropdownItem>
             <DropdownItem divider />
             <DropdownItem tag={Link} to="/apps/profile-details">
@@ -71,7 +70,7 @@ const SidebarTopA = () => (
           </DropdownMenu>
         </UncontrolledButtonDropdown>
         <div className="small sidebar__link--muted">
-          {faker.person.jobTitle()}
+          Software Engineer
         </div>
       </Sidebar.Section>
     </Sidebar.HideSlim>

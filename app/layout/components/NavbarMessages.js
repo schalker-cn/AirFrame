@@ -20,6 +20,8 @@ import {
 } from "./../../components";
 
 const messagesColors = ["text-success", "text-danger", "text-warning"];
+import avatarImg from "../../images/placeholder.jpg";
+
 
 const NavbarMessages = (props) => (
   <UncontrolledDropdown nav inNavbar {...props}>
@@ -27,7 +29,7 @@ const NavbarMessages = (props) => (
       <IconWithBadge
         badge={
           <Badge pill color="secondary">
-            6
+            3
           </Badge>
         }
       >
@@ -63,7 +65,7 @@ const NavbarMessages = (props) => (
             >
               <Media>
                 <Media left>
-                  <Avatar.Image src={faker.image.avatar()} className="mr-4" />
+                  <Avatar.Image src={avatarImg} className="mr-4" />
                 </Media>
                 <Media body>
                   <span className="d-flex justify-content-start">
@@ -77,7 +79,7 @@ const NavbarMessages = (props) => (
                     <span className="ml-1 small">(23)</span>
                     <span className="ml-auto small">Now</span>
                   </span>
-                  <p className="mt-2 mb-1">{faker.lorem.sentences()}</p>
+                  <p className="mt-2 mb-1">{` posted a message: "${faker.hacker.phrase()}".`}</p>
                 </Media>
               </Media>
             </ListGroupItem>

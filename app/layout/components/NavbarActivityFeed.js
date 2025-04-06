@@ -42,7 +42,7 @@ const NavbarActivityFeed = (props) => (
       <IconWithBadge
         badge={
           <Badge pill color="primary">
-            6
+            2
           </Badge>
         }
       >
@@ -52,12 +52,12 @@ const NavbarActivityFeed = (props) => (
     <ExtendedDropdown right>
       <ExtendedDropdown.Section className="d-flex justify-content-between align-items-center">
         <h6 className="mb-0">Activity Feed</h6>
-        <Badge pill>4</Badge>
+        <Badge pill>2</Badge>
       </ExtendedDropdown.Section>
 
       <ExtendedDropdown.Section list>
         <ListGroup>
-          {_.times(7, (index) => (
+          {_.times(2, (index) => (
             <ListGroupItem key={index} action>
               <Media>
                 <Media left>{activityFeedIcons[index % 4]}</Media>
@@ -65,8 +65,8 @@ const NavbarActivityFeed = (props) => (
                   <span className="h6">
                     {faker.person.firstName()} {faker.person.lastName()}
                   </span>{" "}
-                  changed Description to &quot;{faker.random.words()}&quot;
-                  <p className="mt-2 mb-1">{faker.lorem.sentence()}</p>
+                  Weekly software testing meeting
+                  <p className="mt-2 mb-1">the test result should be updated everyday.</p>
                   <div className="small mt-2">
                     {faker.date.past().toString()}
                   </div>
