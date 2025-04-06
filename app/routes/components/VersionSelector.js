@@ -87,7 +87,7 @@ export class VersionSelector extends React.Component {
                                 </React.Fragment>
                             )
                         ) : (
-                            <span>Loading...</span>
+                            <span>ver. 1.0.0</span>
                         )
                     }
                 </DropdownToggle>

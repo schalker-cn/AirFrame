@@ -8,58 +8,14 @@ import {
 // ----------- Pages Imports ---------------
 import Analytics from './Dashboards/Analytics';
 import ProjectsDashboard from './Dashboards/Projects';
-import System from './Dashboards/System';
-import Monitor from './Dashboards/Monitor'; 
 import Financial from './Dashboards/Financial';
-import Stock from './Dashboards/Stock';
-import Reports from './Dashboards/Reports';
 
-import Widgets from './Widgets';
 
-import Cards from './Cards/Cards';
-import CardsHeaders from './Cards/CardsHeaders';
 
 import NavbarOnly from './Layouts/NavbarOnly';
-import SidebarDefault from './Layouts/SidebarDefault';
-import SidebarA from './Layouts/SidebarA';
-import DragAndDropLayout from './Layouts/DragAndDropLayout';
 import SidebarWithNavbar from './Layouts/SidebarWithNavbar';
 
-import Accordions from './Interface/Accordions';
-import Alerts from './Interface/Alerts';
-import Avatars from './Interface/Avatars';
-import BadgesLabels from './Interface/BadgesLabels';
-import Breadcrumbs from './Interface/Breadcrumbs';
-import Buttons from './Interface/Buttons';
-import Colors from './Interface/Colors';
-import Dropdowns from './Interface/Dropdowns';
-import Images from './Interface/Images';
-import ListGroups from './Interface/ListGroups';
-import MediaObjects from './Interface/MediaObjects';
-import Modals from './Interface/Modals';
-import Navbars from './Interface/Navbars';
-import Paginations from './Interface/Paginations';
-import ProgressBars from './Interface/ProgressBars';
-import TabsPills from './Interface/TabsPills';
-import TooltipPopovers from './Interface/TooltipsPopovers';
-import Typography from './Interface/Typography';
-import Notifications from './Interface/Notifications';
-import CropImage from './Interface/CropImage';
-import DragAndDropElements from './Interface/DragAndDropElements';
-import Calendar from './Interface/Calendar';
-import ReCharts from './Graphs/ReCharts';
 
-import Forms from './Forms/Forms';
-import FormsLayouts from './Forms/FormsLayouts';
-import InputGroups from './Forms/InputGroups';
-import Wizard from './Forms/Wizard';
-import TextMask from './Forms/TextMask';
-import Typeahead from './Forms/Typeahead';
-import Toggles from './Forms/Toggles';
-import Editor from './Forms/Editor';
-import DatePicker from './Forms/DatePicker';
-import Dropzone from './Forms/Dropzone';
-import Sliders from './Forms/Sliders';
 
 import Tables from './Tables/Tables';
 import ExtendedTable from './Tables/ExtendedTable';
@@ -118,11 +74,7 @@ export const RoutedContent = () => {
             
             <Route path="/dashboards/analytics" exact component={Analytics} />
             <Route path="/dashboards/projects" exact component={ProjectsDashboard} />
-            <Route path="/dashboards/system" exact component={System} />
-            <Route path="/dashboards/monitor" exact component={Monitor} />
             <Route path="/dashboards/financial" exact component={Financial} />
-            <Route path="/dashboards/stock" exact component={Stock} />
-            <Route path="/dashboards/reports" exact component={Reports} />
         </Switch>
     );
 };
