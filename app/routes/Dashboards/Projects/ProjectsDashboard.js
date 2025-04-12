@@ -1,5 +1,4 @@
 import React from "react";
-import { faker } from "@faker-js/faker";
 import { Link } from "react-router-dom";
 import {
   Container,
