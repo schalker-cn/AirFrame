@@ -49,12 +49,10 @@ const NavbarNavigation = ({ accent, pills, ...navbarProps }) => (
                 <DropdownItem tag={ Link } to="/interface/paginations">Paginations</DropdownItem>
                 <DropdownItem tag={ Link } to="/interface/images">Images</DropdownItem>
                 <DropdownItem tag={ Link } to="/interface/avatars">Avatars</DropdownItem>
-                <DropdownItem tag={ Link } to="/interface/progressbars">Progress Bars</DropdownItem>
                 <DropdownItem tag={ Link } to="/interface/badgeslabels">Badges & Labels</DropdownItem>
                 <DropdownItem tag={ Link } to="/interface/mediaobjects">Media Objects</DropdownItem>
                 <DropdownItem tag={ Link } to="/interface/listgroups">List Groups</DropdownItem>
                 <DropdownItem tag={ Link } to="/interface/alerts">Alerts</DropdownItem>
-                <DropdownItem tag={ Link } to="/interface/accordions">Accordions</DropdownItem>
                 <DropdownItem tag={ Link } to="/interface/tabspills">Tabs Pills</DropdownItem>
                 <DropdownItem tag={ Link } to="/interface/tooltipspopovers">Tooltips Popovers</DropdownItem>
                 <DropdownItem tag={ Link } to="/interface/dropdowns">Dropdowns</DropdownItem>
@@ -134,7 +132,6 @@ const NavbarNavigation = ({ accent, pills, ...navbarProps }) => (
             </DropdownToggle>
             <DropdownMenu>
                 <DropdownItem header>Cards</DropdownItem>
-                <DropdownItem tag={ Link } to="/cards/cards">Cards</DropdownItem>
                 <DropdownItem tag={ Link } to="/cards/cardsheaders">Cards Headers</DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem header>Layouts</DropdownItem>
