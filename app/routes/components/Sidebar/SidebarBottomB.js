@@ -12,11 +12,12 @@ import {
   Avatar,
   AvatarAddOn,
 } from "./../../../components";
-import avatarImg from "../../../images/placeholder.jpg";
 
 import { DropdownProfile } from "../Dropdowns/DropdownProfile";
 import { FooterAuth } from "../Pages/FooterAuth";
 import { FooterText } from "../FooterText";
+
+const avatarImg = "https://dummyimage.com/1080x1080/0606fc/0606fc&text=1";
 
 const SidebarBottomB = () => (
   <React.Fragment>

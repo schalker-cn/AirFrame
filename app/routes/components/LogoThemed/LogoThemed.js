@@ -4,18 +4,21 @@ import classNames from 'classnames';
 
 import { ThemeConsumer } from '../../../components/Theme';
 
+const PLACEHOLDER_URL = "https://dummyimage.com/100x20/0606fc/0606fc&text=1";
+
 const logos = {
-    'white': require('./../../../images/logoPlaceholder.jpg'),
-    'primary': require('./../../../images/logoPlaceholder.jpg'),
-    'success': require('./../../../images/logoPlaceholder.jpg'),
-    'warning': require('./../../../images/logoPlaceholder.jpg'),
-    'danger': require('./../../../images/logoPlaceholder.jpg'),
-    'info': require('./../../../images/logoPlaceholder.jpg'),
-    'indigo': require('./../../../images/logoPlaceholder.jpg'),
-    'purple': require('./../../../images/logoPlaceholder.jpg'),
-    'pink': require('./../../../images/logoPlaceholder.jpg'),
-    'yellow': require('./../../../images/logoPlaceholder.jpg')
-}
+    white: PLACEHOLDER_URL,
+    primary: PLACEHOLDER_URL,
+    success: PLACEHOLDER_URL,
+    warning: PLACEHOLDER_URL,
+    danger: PLACEHOLDER_URL,
+    info: PLACEHOLDER_URL,
+    indigo: PLACEHOLDER_URL,
+    purple: PLACEHOLDER_URL,
+    pink: PLACEHOLDER_URL,
+    yellow: PLACEHOLDER_URL,
+    blue: PLACEHOLDER_URL
+};
 
 const getLogoUrl = (style, color) => {
     return logos[color];

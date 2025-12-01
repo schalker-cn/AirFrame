@@ -13,7 +13,6 @@ import {
     UncontrolledDropdown,
     ThemeConsumer,
 } from './../../../../components';
-import avatarImg from "../../../../images/placeholder.jpg";
 
 import { NavbarActivityFeed } from
     './../../../../layout/components/NavbarActivityFeed';
@@ -27,6 +26,8 @@ import { NavbarNavigation } from
     './../../../components/Navbars/NavbarNavigation';
 import { LogoThemed } from
     './../../../components/LogoThemed/LogoThemed';
+
+const avatarImg = "https://dummyimage.com/1080x1080/0606fc/0606fc&text=1";
 
 export const LayoutNavbar = () => (
     <React.Fragment>

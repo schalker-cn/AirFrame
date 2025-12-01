@@ -24,7 +24,7 @@ import { NavbarUser } from './../../../layout/components/NavbarUser';
 import { NavbarNavigation } from './NavbarNavigation';
 import { DropdownProfile } from './../Dropdowns/DropdownProfile';
 
-import avatarImg from "../../../images/placeholder.jpg";
+const avatarImg = "https://dummyimage.com/1080x1080/0606fc/0606fc&text=1";
 
 const NavbarExample = ({ themeColor, themeStyle, navStyle }) => {
     return (
