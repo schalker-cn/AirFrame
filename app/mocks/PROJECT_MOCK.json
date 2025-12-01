@@ -1,0 +1,34 @@
+{
+  "projects": [
+    {
+      "id": "project-1",
+      "title": "Payment Gateway Integration",
+      "badgeColor": "success",
+      "badgeTitle": "Active",
+      "progressValue": "76",
+      "completeValue": "13",
+      "myTasksValue": "35",
+      "daysDueValue": "6"
+    },
+    {
+      "id": "project-2",
+      "title": "Inventory Management",
+      "badgeColor": "danger",
+      "badgeTitle": "Suspended",
+      "progressValue": "23",
+      "completeValue": "6",
+      "myTasksValue": "87",
+      "daysDueValue": "15"
+    },
+    {
+      "id": "project-3",
+      "title": "Mobile App Redesign",
+      "badgeColor": "secondary",
+      "badgeTitle": "Archived",
+      "progressValue": "4",
+      "completeValue": "98",
+      "myTasksValue": "21",
+      "daysDueValue": "7"
+    }
+  ]
+}

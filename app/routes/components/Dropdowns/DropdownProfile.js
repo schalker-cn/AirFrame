@@ -1,5 +1,4 @@
 import React from "react";
-import { faker } from "@faker-js/faker";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
@@ -9,7 +8,7 @@ const DropdownProfile = (props) => (
   <React.Fragment>
     <DropdownMenu right={props.right}>
       <DropdownItem header>
-        {faker.person.firstName()} {faker.person.lastName()}
+        Isabella Rossi
       </DropdownItem>
       <DropdownItem divider />
       <DropdownItem tag={Link} to="/apps/profile-details">

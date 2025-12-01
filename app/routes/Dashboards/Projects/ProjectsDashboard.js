@@ -22,6 +22,8 @@ import { TasksMedia } from "../../components/ProjectsDashboards/TasksMedia";
 import { TimelineMini } from "../../components/Timeline/TimelineMini";
 import { DraggableProjects } from "./DraggableProjects";
 
+import TIMELINE_MOCK from "../../../mocks/TIMELINE_MOCK.json";
+
 const ProjectsDashboard = () => (
   <Container>
     <Row className="mb-5">
@@ -43,7 +45,6 @@ const ProjectsDashboard = () => (
                   color="secondary"
                   outline
                   tag={Link}
-                  to="/apps/tasks/list"
                 >
                   <i className="fa fa-search"></i>
                 </Button>
@@ -51,22 +52,17 @@ const ProjectsDashboard = () => (
             </InputGroup>
           </CardBody>
           <ListGroup flush>
-            <ListGroupItem action>
-              <TasksMedia iconColor="success" />
+            <ListGroupItem>
+              <TasksMedia iconColor="success" id="1"/>
             </ListGroupItem>
-            <ListGroupItem action>
+            <ListGroupItem>
               <TasksMedia iconColor="danger" id="2" />
             </ListGroupItem>
-            <ListGroupItem action>
+            <ListGroupItem>
               <TasksMedia iconColor="warning" id="3" />
             </ListGroupItem>
-            <ListGroupItem action>
-              <TasksMedia id="4" />
-            </ListGroupItem>
             <ListGroupItem
-              action
               tag={Link}
-              to="/apps/tasks/list"
               className="text-center"
             >
               View All Tasks
@@ -79,47 +75,23 @@ const ProjectsDashboard = () => (
         <Card className="mb-3">
           <CardBody>
             <CardTitle tag="h6">Timeline Mini</CardTitle>
-            <TimelineMini
-              showPillDate
-              pillDate="2 Days ago"
-              icon="times-circle"
-              iconClassName="text-danger"
-              badgeTitle="Alert"
-              badgeColor="danger"
-            />
-            <TimelineMini
-              icon="question-circle"
-              iconClassName="text-warning"
-              badgeTitle="Warning"
-              badgeColor="warning"
-            />
-            <TimelineMini
-              icon="info-circle"
-              iconClassName="text-info"
-              badgeTitle="Info"
-              badgeColor="info"
-            />
-            <TimelineMini
-              showPillDate
-              pillDate="Yesterday"
-              icon="plus-circle"
-              iconClassName="text-primary"
-              badgeTitle="Message"
-              badgeColor="primary"
-            />
-            <TimelineMini
-              icon="check-circle"
-              iconClassName="text-success"
-              badgeTitle="Success"
-              badgeColor="success"
-            />
-            <TimelineMini icon="circle" badgeTitle="Obsolete" />
+            {TIMELINE_MOCK.timeline.map((item, index) => (
+              <TimelineMini
+                key={index}
+                showPillDate={item.showPillDate}
+                pillDate={item.pillDate}
+                icon={item.icon}
+                iconClassName={item.iconClassName}
+                badgeTitle={item.badgeTitle}
+                badgeColor={item.badgeColor}
+                content={item.content}
+                date={item.date}
+              />
+            ))}
           </CardBody>
           <ListGroup flush>
             <ListGroupItem
-              action
               tag={Link}
-              to="/pages/timeline"
               className="text-center"
             >
               Timeline Details
@@ -141,7 +113,6 @@ const ProjectsDashboard = () => (
                   color="secondary"
                   outline
                   tag={Link}
-                  to="/apps/projects/list"
                 >
                   <i className="fa fa-search"></i>
                 </Button>

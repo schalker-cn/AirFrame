@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
-import moment from 'moment';
 
 import {  
     ResponsiveContainer,
@@ -18,25 +17,16 @@ import {
 
 import colors from './../../../../colors';
 
-const CHART_LENGTH = 30;
-const CHART_START_DATE = moment().subtract(CHART_LENGTH, 'months');
+const data = [
+  { key: 0, month: "Jan 22", Tokyo: 1700, "New York": 1500, Berlin: 900 },
+  { key: 1, month: "Feb 22", Tokyo: 1650, "New York": 1400, Berlin: 950 },
+  { key: 2, month: "Mar 22", Tokyo: 1720, "New York": 1550, Berlin: 1000 },
+  { key: 3, month: "Apr 22", Tokyo: 1690, "New York": 1600, Berlin: 980 },
+  { key: 4, month: "May 22", Tokyo: 1750, "New York": 1700, Berlin: 1100 },
+  { key: 5, month: "Jun 22", Tokyo: 1780, "New York": 1650, Berlin: 1150 }
+];
 
-const dataGenerator = (index) => {
-    const referenceValue = _.random(1500, 1800);
-    const halfedRefVal = referenceValue / 2;
-
-    return {
-        key: index,
-        month: moment(CHART_START_DATE).add(index, 'months').format('MMM YY'),
-        "Tokyo": referenceValue,
-        "New York": _.random(1200, 2200),
-        "Berlin": referenceValue - _.random(halfedRefVal, halfedRefVal * 1.1),
-    };
-}
-
-const data = _.times(CHART_LENGTH, dataGenerator);
-
-// eslint-disable-next-line react/prop-types
+// 保留你的 dot 生成逻辑
 const generateDot = ({stroke, ...other}) => (
     <Dot
         { ...other }
@@ -74,4 +64,4 @@ export const AudienceMetricsChart = ({height, className}) => (
 AudienceMetricsChart.propTypes = {
     height: PropTypes.string,
     className: PropTypes.string
-}
+};

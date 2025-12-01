@@ -1,5 +1,4 @@
 import React from "react";
-import { faker } from "@faker-js/faker";
 import PropTypes from "prop-types";
 
 import { Badge } from "./../../../components";
@@ -33,9 +32,9 @@ const TimelineMini = (props) => (
             </span>
           </div>
           {/* Content */}
-          <p className="text-inverse mb-1">{faker.company.catchPhrase()}</p>
+          <p className="text-inverse mb-1">{props.content}</p>
           {/* Date */}
-          <p>{faker.date.past().toString()}</p>
+          <p>{props.date}</p>
         </div>
       </div>
       {/* END POST Timeline */}
@@ -51,6 +50,8 @@ TimelineMini.propTypes = {
   iconClassName: PropTypes.string,
   badgeColor: PropTypes.string,
   badgeTitle: PropTypes.string,
+  content: PropTypes.string,
+  date: PropTypes.string
 };
 
 TimelineMini.defaultProps = {

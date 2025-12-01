@@ -1,10 +1,9 @@
 import React from "react";
-import uid from "uuid/v4";
-import { faker } from "@faker-js/faker";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import _ from "lodash";
 
 import { ProjectsList } from "../../components/ProjectsDashboards/ProjectsList";
+import PROJECT_MOCK from "../../../mocks/PROJECT_MOCK.json";
 
 const reorder = (list, startIndex, endIndex) => {
   const result = Array.from(list);
@@ -19,48 +18,7 @@ export class DraggableProjects extends React.Component {
     super(props);
 
     this.state = {
-      projects: [
-        {
-          id: uid(),
-          title: faker.commerce.productName(),
-          badgeColor: "success",
-          badgeTitle: "Active",
-          progressValue: "76",
-          completeValue: "13",
-          myTasksValue: "35",
-          daysDueValue: "6",
-        },
-        {
-          id: uid(),
-          title: faker.commerce.productName(),
-          badgeColor: "danger",
-          badgeTitle: "Suspended",
-          progressValue: "23",
-          completeValue: "6",
-          myTasksValue: "87",
-          daysDueValue: "15",
-        },
-        {
-          id: uid(),
-          title: faker.commerce.productName(),
-          badgeColor: "secondary",
-          badgeTitle: "Archived",
-          progressValue: "4",
-          completeValue: "98",
-          myTasksValue: "21",
-          daysDueValue: "7",
-        },
-        {
-          id: uid(),
-          title: faker.commerce.productName(),
-          badgeColor: "warning",
-          badgeTitle: "Paused",
-          progressValue: "63",
-          completeValue: "98",
-          myTasksValue: "21",
-          daysDueValue: "7",
-        },
-      ],
+      projects: PROJECT_MOCK.projects,
     };
 
     this.onDragEnd = this.onDragEnd.bind(this);

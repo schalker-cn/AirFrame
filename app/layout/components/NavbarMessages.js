@@ -1,6 +1,6 @@
 import React from "react";
-import { faker } from "@faker-js/faker";
 import _ from "lodash";
+import MESSAGE_MOCK from "../../mocks/MESSAGE_MOCK.json";
 import PropTypes from "prop-types";
 
 import {
@@ -19,7 +19,6 @@ import {
   Button,
 } from "./../../components";
 
-const messagesColors = ["text-success", "text-danger", "text-warning"];
 import avatarImg from "../../images/placeholder.jpg";
 
 
@@ -56,10 +55,9 @@ const NavbarMessages = (props) => (
 
       <ExtendedDropdown.Section list>
         <ListGroup>
-          {_.times(3, (index) => (
+          {MESSAGE_MOCK.messages.map((msg, index) => (
             <ListGroupItem
               tag={ExtendedDropdown.Link}
-              to="/apps/email-details"
               key={index}
               action
             >
@@ -70,16 +68,18 @@ const NavbarMessages = (props) => (
                 <Media body>
                   <span className="d-flex justify-content-start">
                     <i
-                      className={`fa fa-circle small ${messagesColors[index]} mr-2 d-flex align-items-center`}
+                      className={`fa fa-circle small ${msg.statusColor} mr-2 d-flex align-items-center`}
                     />
                     <span className="h6 pb-0 mb-0 d-flex align-items-center">
-                      {faker.person.firstName()} {faker.person.lastName()}
+                      {msg.firstName} {msg.lastName}
                     </span>
 
-                    <span className="ml-1 small">(23)</span>
-                    <span className="ml-auto small">Now</span>
+                    <span className="ml-1 small">({msg.unreadCount})</span>
+                    <span className="ml-auto small">{msg.time}</span>
                   </span>
-                  <p className="mt-2 mb-1">{` posted a message: "${faker.hacker.phrase()}".`}</p>
+                  <p className="mt-2 mb-1">
+                    {`${msg.title}: "${msg.content}".`}
+                  </p>
                 </Media>
               </Media>
             </ListGroupItem>
@@ -90,7 +90,6 @@ const NavbarMessages = (props) => (
       <ExtendedDropdown.Section
         className="text-center"
         tag={ExtendedDropdown.Link}
-        to="/apps/inbox"
       >
         View All
         <i className="fa fa-angle-right fa-fw ml-2" />

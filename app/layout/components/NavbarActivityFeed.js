@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { faker } from "@faker-js/faker";
+import ACTIVITY_FEED_MOCK from "../../mocks/ACTIVITY_FEED_MOCK.json";
 import _ from "lodash";
 import PropTypes from "prop-types";
 
@@ -57,19 +57,19 @@ const NavbarActivityFeed = (props) => (
 
       <ExtendedDropdown.Section list>
         <ListGroup>
-          {_.times(2, (index) => (
+          {ACTIVITY_FEED_MOCK.messages.map((msg, index) => (
             <ListGroupItem key={index} action>
               <Media>
-                <Media left>{activityFeedIcons[index % 4]}</Media>
+                <Media left>
+                  {activityFeedIcons[index % 4]}
+                </Media>
                 <Media body>
                   <span className="h6">
-                    {faker.person.firstName()} {faker.person.lastName()}
+                    {msg.firstName} {msg.lastName}
                   </span>{" "}
-                  Weekly software testing meeting
-                  <p className="mt-2 mb-1">the test result should be updated everyday.</p>
-                  <div className="small mt-2">
-                    {faker.date.past().toString()}
-                  </div>
+                  {msg.title}
+                  <p className="mt-2 mb-1">{msg.content}</p>
+                  <div className="small mt-2">{msg.date}</div>
                 </Media>
               </Media>
             </ListGroupItem>
@@ -80,7 +80,6 @@ const NavbarActivityFeed = (props) => (
       <ExtendedDropdown.Section
         className="text-center"
         tag={Link}
-        to="/apps/widgets"
       >
         See All Notifications
         <i className="fa fa-angle-right fa-fw ml-2" />
