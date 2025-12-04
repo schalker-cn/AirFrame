@@ -48,26 +48,6 @@ const SidebarTopA = () => (
             Isabella Rossi
             <i className="fa fa-angle-down ml-2"></i>
           </DropdownToggle>
-          <DropdownMenu persist>
-            <DropdownItem header>
-            Isabella Rossi
-            </DropdownItem>
-            <DropdownItem divider />
-            <DropdownItem tag={Link}>
-              My Profile
-            </DropdownItem>
-            <DropdownItem tag={Link}>
-              Settings
-            </DropdownItem>
-            <DropdownItem tag={Link}>
-              Billings
-            </DropdownItem>
-            <DropdownItem divider />
-            <DropdownItem tag={Link}>
-              <i className="fa fa-fw fa-sign-out mr-2"></i>
-              Sign Out
-            </DropdownItem>
-          </DropdownMenu>
         </UncontrolledButtonDropdown>
         <div className="small sidebar__link--muted">
           Software Engineer

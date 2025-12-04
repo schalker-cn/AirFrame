@@ -10,32 +10,14 @@ import { MenuContext } from './MenuContext';
  * Renders a collapse trigger or a ReactRouter Link 
  */
 const SidebarMenuItemLink = (props) => (
-    (props.to || props.href) ? (
-        props.to ? (
-            <Link to={ props.to } className={`${props.classBase}__entry__link`}>
-                { props.children }
-            </Link>
-        ) : (
-            <a
-                href={ props.href }
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`${props.classBase}__entry__link`}
-            >
-                { props.children }
-            </a>
-        )
-        
-    ) : (
-        <a
-            href="javascript:;"
-            className={`${props.classBase}__entry__link`}
-            onClick={ () => props.onToggle() }
-        >
-            { props.children }
-        </a>
-    )
-)
+    <span
+        className={`${props.classBase}__entry__link`}
+        style={{ cursor: "default" }}
+    >
+        { props.children }
+    </span>
+);
+
 SidebarMenuItemLink.propTypes = {
     to: PropTypes.string,
     href: PropTypes.string,

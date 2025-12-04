@@ -107,15 +107,6 @@ export class Analytics extends React.Component {
                     <i className="fa fa-angle-down text-body ml-2" />
                   </DropdownToggle>
                   <div className="small">Jan 01, 2017 to Jan 31, 2017</div>
-                  <DropdownMenu>
-                    <DropdownItem header>Select Period:</DropdownItem>
-                    <DropdownItem active>Last Month</DropdownItem>
-                    <DropdownItem>Last 3 Months</DropdownItem>
-                    <DropdownItem>Last 6 Months</DropdownItem>
-                    <DropdownItem>Last Year</DropdownItem>
-                    <DropdownItem divider />
-                    <DropdownItem>Custom...</DropdownItem>
-                  </DropdownMenu>
                 </UncontrolledButtonDropdown>
               </ButtonGroup>
               <ButtonGroup className="align-self-start mr-2">
@@ -129,15 +120,6 @@ export class Analytics extends React.Component {
                     <i className="fa fa-angle-down text-body ml-2" />
                   </DropdownToggle>
                   <div className="small">Jan 01, 2017 to Jan 31, 2017</div>
-                  <DropdownMenu>
-                    <DropdownItem header>Select Period:</DropdownItem>
-                    <DropdownItem active>Previous Period</DropdownItem>
-                    <DropdownItem>Last 3 Months</DropdownItem>
-                    <DropdownItem>Last 6 Months</DropdownItem>
-                    <DropdownItem>Last Year</DropdownItem>
-                    <DropdownItem divider />
-                    <DropdownItem>Custom...</DropdownItem>
-                  </DropdownMenu>
                 </UncontrolledButtonDropdown>
               </ButtonGroup>
               <ButtonGroup className="align-self-start">

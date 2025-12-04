@@ -6,7 +6,6 @@ const FooterText = (props) => (
 		(C) { props.year } All Rights Reserved. This is the &quot;{ props.name }&quot; built with { props.desc }. 
 		Designed and implemented by{' '}
 		<a
-			href="http://www.webkom.co"
 			target="_blank"
 			rel="noopener noreferrer"
 			className="sidebar__link"
