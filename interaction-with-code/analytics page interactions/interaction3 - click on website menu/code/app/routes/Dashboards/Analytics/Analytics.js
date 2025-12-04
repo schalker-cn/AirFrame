@@ -84,6 +84,16 @@ export class Analytics extends React.Component {
                     www.webkom.co
                     <i className="fa fa-angle-down text-body ml-2" />
                   </DropdownToggle>
+                  <DropdownMenu>
+                    <DropdownItem header>Select Site:</DropdownItem>
+                    <DropdownItem active>www.webkom.co</DropdownItem>
+                    <DropdownItem>www.spin.webkom.co</DropdownItem>
+                    <DropdownItem divider />
+                    <DropdownItem>
+                      <i className="fa fa-fw fa-plus mr-2"></i>
+                      Add New
+                    </DropdownItem>
+                  </DropdownMenu>
                 </UncontrolledButtonDropdown>
               </ButtonGroup>
               <ButtonGroup className="align-self-start mr-2">

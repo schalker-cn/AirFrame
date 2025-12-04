@@ -7,8 +7,6 @@ import {
   ButtonGroup,
   UncontrolledButtonDropdown,
   DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
   FloatGrid as Grid,
   Card,
   CardBody,

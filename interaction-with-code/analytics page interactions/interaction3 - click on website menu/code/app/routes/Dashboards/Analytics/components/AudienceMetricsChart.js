@@ -24,6 +24,7 @@ const data = [
   { key: 5, month: "Jun 22", Tokyo: 1780, "New York": 1650, Berlin: 1150 }
 ];
 
+// 保留你的 dot 生成逻辑
 const generateDot = ({stroke, ...other}) => (
     <Dot
         { ...other }

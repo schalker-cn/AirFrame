@@ -8,6 +8,8 @@ import {
     CartesianGrid, 
     XAxis,
     YAxis,
+    Tooltip,
+    Legend,
     Area,
     Bar,
     Dot
@@ -24,6 +26,7 @@ const data = [
   { key: 5, month: "Jun 22", Tokyo: 1780, "New York": 1650, Berlin: 1150 }
 ];
 
+// 保留你的 dot 生成逻辑
 const generateDot = ({stroke, ...other}) => (
     <Dot
         { ...other }
@@ -50,6 +53,8 @@ export const AudienceMetricsChart = ({height, className}) => (
           <CartesianGrid stroke={ colors['200'] } strokeDasharray='none' vertical={ false }/>
           <XAxis dataKey="month"/>
           <YAxis />
+          <Tooltip />
+          <Legend />
           <Bar dataKey='New York' barSize={5} fill={ colors['400'] } />
           <Area dataKey='Tokyo' fill={ colors['purple-02'] } stroke={ colors['purple'] } activeDot={ null } />
           <Area dataKey='Berlin' fill={ colors['primary-04'] } stroke={ colors['primary'] } activeDot={{r: 5}} dot={generateDot}  />
